@@ -112,3 +112,7 @@ app.*.map.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
+
+# Localization related
+app_localizations.dart
+app_localizations_*.dart
