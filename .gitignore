@@ -9,6 +9,7 @@
 .history
 .svn/
 migrate_working_dir/
+devtools_options.yaml
 
 # IntelliJ related
 *.iml
@@ -52,6 +53,7 @@ unlinked_spec.ds
 **/android/app/debug
 **/android/app/profile
 **/android/app/release
+**/android/app/.cxx
 *.jks
 
 # iOS/XCode related
