@@ -17,6 +17,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.3.0"
+  api_repository:
+    dependency: "direct main"
+    description:
+      path: "libs/api_repository"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   args:
     dependency: transitive
     description:
