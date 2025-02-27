@@ -1,7 +1,8 @@
 import 'package:api_repository/api_repository.dart';
+import 'package:flutter_test/flutter_test.dart';
+
 import '../../../src/app/app.dart';
 import '../../../src/todos/view/todos_view.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   const apiRepository = ApiRepository();
