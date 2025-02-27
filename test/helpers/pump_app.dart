@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/l10n/l10n.dart';
+import '../../src/l10n/l10n.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 extension PumpApp on WidgetTester {

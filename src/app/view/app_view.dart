@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/todos/view/todos_view.dart';
+import '../../l10n/l10n.dart';
+import '../../todos/view/todos_view.dart';
 
 class AppView extends StatelessWidget {
   const AppView({super.key});
