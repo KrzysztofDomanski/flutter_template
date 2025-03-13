@@ -16,6 +16,10 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.19.0
+  powersync_repository:
+    path: libs/powersync_repository
+  shared:
+    path: libs/shared
 
 dev_dependencies:
   bloc_test: ^9.1.7

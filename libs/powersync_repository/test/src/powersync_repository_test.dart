@@ -6,7 +6,14 @@ import 'package:powersync_repository/powersync_repository.dart';
 void main() {
   group('PowersyncRepository', () {
     test('can be instantiated', () {
-      expect(PowersyncRepository(), isNotNull);
+      expect(
+        PowersyncRepository(
+          env: (env) {
+            return '';
+          },
+        ),
+        isNotNull,
+      );
     });
   });
 }
