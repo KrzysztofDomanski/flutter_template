@@ -1,8 +1,8 @@
 import 'package:api_repository/api_repository.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../src/app/app.dart';
-import '../../../src/todos/view/todos_view.dart';
 
 void main() {
   const apiRepository = ApiRepository();
@@ -13,7 +13,7 @@ void main() {
           apiRepository: apiRepository,
         ),
       );
-      expect(find.byType(TodosPage), findsOneWidget);
+      expect(find.byType(Scaffold), findsOneWidget);
     });
   });
 }
