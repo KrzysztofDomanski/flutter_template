@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../l10n/l10n.dart';
+import '../../auth/sign_up/sign_up.dart';
 
 class AppView extends StatelessWidget {
   const AppView({super.key});
@@ -18,7 +19,7 @@ class AppView extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       home: const SafeArea(
         child: Scaffold(
-          body: Text('Hello World'),
+          body: SignUp(),
         ),
       ),
     );

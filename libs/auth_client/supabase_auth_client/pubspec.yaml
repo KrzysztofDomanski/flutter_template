@@ -1,0 +1,23 @@
+name: supabase_auth_client
+description: Supabase authentication client interface
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+  flutter: ^3.24.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  test: ^1.25.8
+  very_good_analysis: ^6.0.0
+dependencies:
+  auth_client:
+    path: ../auth_client
+  flutter:
+    sdk: flutter
+  powersync_repository:
+    path: ../../powersync_repository
+  supabase_flutter: ^2.8.4

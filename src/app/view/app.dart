@@ -1,17 +1,30 @@
-import 'package:api_repository/api_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:powersync_repository/powersync_repository.dart';
+import 'package:user_repository/user_repository.dart';
 import 'app_view.dart';
 
 class App extends StatelessWidget {
-  const App({required this.apiRepository, super.key});
+  const App({
+    required this.powersyncRepository,
+    required this.userRepository,
+    super.key,
+  });
 
-  final ApiRepository apiRepository;
+  final PowersyncRepository powersyncRepository;
+  final UserRepository userRepository;
 
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider.value(
-      value: apiRepository,
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider.value(
+          value: powersyncRepository,
+        ),
+        RepositoryProvider.value(
+          value: userRepository,
+        )
+      ],
       child: const AppView(),
     );
   }
