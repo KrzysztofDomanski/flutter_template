@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared/shared.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../../cubit/auth_cubit.dart';
 import '../cubit/sign_up_cubit.dart';
 
 class SignUpView extends StatefulWidget {
@@ -59,12 +61,17 @@ class _SignUpViewState extends State<SignUpView> {
             ),
             obscureText: true,
           ),
-          TextButton(
+          ElevatedButton(
             onPressed: () {
               _signUp(context);
             },
             child: const Text('Sign up'),
           ),
+          const Spacer(),
+          TextButton(
+              onPressed: () =>
+                  context.read<AuthCubit>().changeAuth(showLogin: true),
+              child: Text("Already have an account? Sign in")),
         ],
       ),
     );
@@ -79,11 +86,14 @@ class _SignUpViewState extends State<SignUpView> {
         email: _emailController.text,
         password: _passwordController.text,
       );
+      logD(response.toString());
     } on AuthException catch (e) {
       _error = e.message;
+      logE(_error);
       setState(() {});
     } catch (e) {
       _error = e.toString();
+      logE(_error);
       setState(() {});
     }
   }

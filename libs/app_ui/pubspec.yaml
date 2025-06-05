@@ -1,5 +1,5 @@
-name: user_repository
-description: A repository for managing the current user
+name: app_ui
+description: A Very Good Project created by Very Good CLI.
 version: 0.1.0+1
 publish_to: none
 
@@ -8,12 +8,10 @@ environment:
   flutter: ^3.24.0
 
 dependencies:
-  auth_client:
-    path: ../auth_client/auth_client
-  database_client:
-    path: ../database_client
+  flex_color_scheme: ^8.2.0
   flutter:
     sdk: flutter
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:

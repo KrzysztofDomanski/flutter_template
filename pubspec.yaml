@@ -7,8 +7,11 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
+  animations: ^2.0.11
   api_repository:
     path: libs/api_repository
+  app_ui:
+    path: libs/app_ui
   bloc: ^8.1.4
   database_client:
     path: libs/database_client
@@ -21,11 +24,14 @@ dependencies:
   form_fields:
     path: libs/form_fields
   formz: ^0.8.0
+  go_router: ^15.1.2
   intl: ^0.19.0
   powersync_repository:
     path: libs/powersync_repository
   shared:
     path: libs/shared
+  supabase_auth_client:
+    path: libs/auth_client/supabase_auth_client
   supabase_flutter: ^2.8.4
   user_repository:
     path: libs/user_repository

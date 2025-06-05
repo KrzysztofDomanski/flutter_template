@@ -41,6 +41,16 @@ class SupabaseAuthClient implements AuthClient {
       );
     }
   }
+
+  @override
+  Future<void> logout() async {
+    try {
+      await _powersyncRepository.db().disconnectAndClear();
+      await _powersyncRepository.supabase.auth.signOut();
+    } catch (error, stackTrace) {
+      Error.throwWithStackTrace(LogoutFailure(error), stackTrace);
+    }
+  }
 }
 
 extension on supabase.User {

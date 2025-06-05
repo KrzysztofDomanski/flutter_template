@@ -14,7 +14,10 @@ class SignUp extends StatelessWidget {
       create: (context) => SignUpCubit(
         userRepository: context.read<UserRepository>(),
       ),
-      child: const SignUpView(),
+      child: const SafeArea(
+          child: Scaffold(
+        body: SignUpView(),
+      )),
     );
   }
 }

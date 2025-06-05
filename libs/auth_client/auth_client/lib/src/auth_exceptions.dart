@@ -19,3 +19,11 @@ class SignUpWithEmailAndPasswordFailure extends AuthenticationException {
   /// {@macro sign_up_with_email_password_failure}
   const SignUpWithEmailAndPasswordFailure(super.error);
 }
+
+/// {@template logout_failure}
+/// Exception thrown when log out action fails
+/// {@endtemplate}
+class LogoutFailure extends AuthenticationException {
+  /// {@macro logout_failure}
+  const LogoutFailure(super.error);
+}

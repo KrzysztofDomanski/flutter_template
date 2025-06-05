@@ -13,4 +13,7 @@ abstract class AuthClient {
     required String email,
     required String password,
   });
+
+  /// Logs the user out
+  Future<void> logout();
 }
